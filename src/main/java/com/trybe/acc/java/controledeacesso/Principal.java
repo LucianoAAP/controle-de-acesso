@@ -40,9 +40,12 @@ public class Principal {
         System.out.println(String.format("a partir de 50: %s", ageData.getElders()));
         System.out.println("");
         System.out.println("----- Percentual -----");
-        System.out.println(String.format("menores: %s", ageData.getPercentage(ageData.getMinors())));
-        System.out.println(String.format("adultas: %s", ageData.getPercentage(ageData.getAdults())));
-        System.out.println(String.format("a partir de 50: %s", ageData.getPercentage(ageData.getElders())));
+        System.out.println(String.format("menores: %s",
+            ageData.getPercentage(ageData.getMinors())));
+        System.out.println(String.format("adultas: %s",
+            ageData.getPercentage(ageData.getAdults())));
+        System.out.println(String.format("a partir de 50: %s",
+            ageData.getPercentage(ageData.getElders())));
         scanner.close();
       } else {
         System.out.println("Entre com uma opção válida!");
