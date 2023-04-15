@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class Principal {
 
   public static void main(String[] args) {
+	  Scanner scanner = new Scanner(System.in);
 	  AgeData ageData = new AgeData();
-	  showMenu(ageData);
+	  showMenu(scanner, ageData);
   }
   
   private static void showMainMenuMessage() {
@@ -16,9 +17,8 @@ public class Principal {
 	  System.out.println("2 - Finalizar sistema e mostrar relatório");
   }
   
-  private static void showMenu(AgeData ageData) {
-	  try {		  
-		  Scanner scanner = new Scanner(System.in);
+  private static void showMenu(Scanner scanner, AgeData ageData) {
+	  try {
 		  showMainMenuMessage();
 		  int option = scanner.nextInt();
 		  if (option == 1) {
@@ -32,7 +32,7 @@ public class Principal {
 				  System.out.println("Pessoa adulta a partir de 50, catraca liberada!");
 			  }
 			  ageData.accessEstablishment(age);
-			  showMenu(ageData);
+			  showMenu(scanner, ageData);
 		  } else if (option == 2) {
 			  System.out.println("----- Quantidade -----");
 			  System.out.println(String.format("menores: %s", ageData.getMinors()));
@@ -46,11 +46,11 @@ public class Principal {
 			  scanner.close();
 		  } else {
 			  System.out.println("Entre com uma opção válida!");
-			  showMenu(ageData);
+			  showMenu(scanner, ageData);
 		  }
 	  } catch (InputMismatchException e) {
 		  System.out.println("Entre com uma opção válida!");
-		  showMenu(ageData);
+		  showMenu(scanner, ageData);
 	}
   }
 }
