@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Principal {
 
+  /**
+   * Método principal.
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     AgeData ageData = new AgeData();

@@ -51,6 +51,9 @@ public class AgeData {
     this.total = total;
   }
 
+  /**
+   * Uma nova pessoa acessa o estabelecimento.
+   */
   public void accessEstablishment(int age) {
     ages.add(age);
     this.total += 1;
@@ -63,6 +66,9 @@ public class AgeData {
     }
   }
 
+  /**
+   * Calcula porcentagens para o relatório.
+   */
   public String getPercentage(int numberOfPeople) {
     DecimalFormat oneDecimalFormat = new DecimalFormat("#.#");
     double percentage = (double) numberOfPeople / this.total * 100;
