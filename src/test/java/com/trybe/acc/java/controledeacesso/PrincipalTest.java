@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-
 class PrincipalTest {
 
   @BeforeAll
@@ -23,11 +22,11 @@ class PrincipalTest {
     String entrada = "";
 
     for (int i = 0; i < 200; i++) {
-      entrada += "1" + System.lineSeparator() + (i + 5) + System.lineSeparator(); 
+      entrada += "1" + System.lineSeparator() + (i + 5) + System.lineSeparator();
     }
-    
+
     entrada += "2";
-      
+
     ByteArrayInputStream bais = new ByteArrayInputStream(entrada.getBytes());
     System.setIn(bais);
 
@@ -43,13 +42,13 @@ class PrincipalTest {
     assertTrue(saida.contains("77.5"));
 
   }
-	
+
   @Test
   @DisplayName("2 - Menu rejeita opção inválida")
   public void testeOpcaoInvalida() {
-    String entrada = "3" + System.lineSeparator(); 
+    String entrada = "3" + System.lineSeparator();
     entrada += "2" + System.lineSeparator();
-    
+
     ByteArrayInputStream bais = new ByteArrayInputStream(entrada.getBytes());
     System.setIn(bais);
 
