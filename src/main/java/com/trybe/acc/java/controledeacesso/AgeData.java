@@ -10,6 +10,7 @@ public class AgeData {
 	private int adults;
 	private int elders;
 	private int total;
+
 	public List<Integer> getAges() {
 		return ages;
 	}
